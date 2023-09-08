@@ -3,9 +3,9 @@
 # Declare variables to be passed into your templates.
 # FortiADC Ingress Controller image from Dockerhub.com
 image:
-  repository: fortinet/qa-fortiweb-ingress
+  repository: fortinet/fortiweb-ingress
   pullPolicy: IfNotPresent
-  tag: "1.0.0-6"
+  tag: "1.0.0"
 
 nameOverride: ""
 fullnameOverride: ""
@@ -48,5 +48,3 @@ controller:
     enabled: true
     default: true
     controllerValue: "fortinet.com/fwb-ingress-controller"
-imagePullSecrets:
-  - name: regcred
