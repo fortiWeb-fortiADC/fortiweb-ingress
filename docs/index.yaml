@@ -2,19 +2,19 @@ apiVersion: v1
 entries:
   fwb-k8s-ctrl:
   - apiVersion: v2
-    appVersion: 1.0.1-8
-    created: "2023-09-11T11:17:14.130183446-07:00"
+    appVersion: 1.0.2-9
+    created: "2023-10-17T13:50:48.090465741-07:00"
     description: A Helm chart for FortiWeb Ingress Controller
-    digest: 47d75dbdd612e240dd91b62fc97f7efc821c664608ce707bc01857e0bbdad2f4
-    kubeVersion: '>= 1.19.8-0, <= 1.27-0'
+    digest: 211f89b766de58538ee80d922f87f48871ad04326e0dc509544a99bf53964387
+    kubeVersion: '>= 1.19.8-0, <= 1.28-0'
     name: fwb-k8s-ctrl
     type: application
     urls:
-    - https://github.com/fortiWeb-fortiADC/fortiweb-ingress/raw/main/docs/fwb-k8s-ctrl-1.0.1-8.tgz
-    version: 1.0.1-8
+    - https://github.com/fortiWeb-fortiADC/fortiweb-ingress/raw/main/docs/fwb-k8s-ctrl-1.0.2-9.tgz
+    version: 1.0.2-9
   - apiVersion: v2
     appVersion: 1.0.0-1
-    created: "2023-09-11T11:17:14.129651511-07:00"
+    created: "2023-10-17T13:50:48.089000621-07:00"
     description: A Helm chart for FortiWeb Ingress Controller
     digest: d9728e6c7cc4349b1da01c99a29e75bc31e10235ecfd2f72b5cb182e47dafdba
     kubeVersion: '>= 1.19.8-0, <= 1.27-0'
@@ -23,4 +23,4 @@ entries:
     urls:
     - https://github.com/fortiWeb-fortiADC/fortiweb-ingress/raw/main/docs/fwb-k8s-ctrl-1.0.0-1.tgz
     version: 1.0.0-1
-generated: "2023-09-11T11:17:14.1285454-07:00"
+generated: "2023-10-17T13:50:48.08546721-07:00"
