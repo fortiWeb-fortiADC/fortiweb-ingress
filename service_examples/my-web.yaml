@@ -5,6 +5,7 @@ metadata:
   labels:
     run: my-web
   annotations: {
+    "health-check-ctrl" : "HLTHCK_ICMP",
     "overlay_tunnel" : "flannel",
   }
 spec:
