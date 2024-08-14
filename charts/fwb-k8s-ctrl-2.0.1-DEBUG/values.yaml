@@ -5,7 +5,7 @@
 image:
   repository: fortinet/qa-fortiweb-ingress
   pullPolicy: IfNotPresent
-  tag: "2.0.1.31"
+  tag: "2.0.1.32"
 
 nameOverride: ""
 fullnameOverride: ""
