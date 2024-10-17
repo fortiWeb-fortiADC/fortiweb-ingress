@@ -31,7 +31,18 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-
+          {{- if eq .Values.parameters.openshiftRouteSupport "yes" }}
+          securityContext:
+              allowPrivilegeEscalation: false
+              runAsNonRoot: true
+              seccompProfile:
+                  type: RuntimeDefault
+              capabilities:
+                  drop: ["ALL"]
+          {{- end }}
+          env:
+          - name: OpenShiftRouteSupport
+            value: "{{ .Values.parameters.openshiftRouteSupport }}"
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
