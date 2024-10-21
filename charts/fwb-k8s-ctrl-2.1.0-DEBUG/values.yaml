@@ -4,8 +4,8 @@
 # FortiWEB Ingress Controller image from Dockerhub.com
 image:
   repository: fortinet/qa-fortiweb-ingress
-  pullPolicy: Always
-  tag: "2.1.0.61"
+  pullPolicy: IfNotPresent
+  tag: "2.1.0.62"
 
 nameOverride: ""
 fullnameOverride: ""
