@@ -3,9 +3,9 @@
 # Declare variables to be passed into your templates.
 # FortiWEB Ingress Controller image from Dockerhub.com
 image:
-  repository: fortinet/qa-fortiweb-ingress
+  repository: fortinet/fortiweb-ingress
   pullPolicy: IfNotPresent
-  tag: "2.1.0.65"
+  tag: "2.1.1"
 
 nameOverride: ""
 fullnameOverride: ""
@@ -51,5 +51,3 @@ controller:
 
 parameters:
   openshiftRouteSupport: "no"
-imagePullSecrets:
-  - name: regcred
