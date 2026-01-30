@@ -41,9 +41,15 @@ spec:
                   type: RuntimeDefault
               capabilities:
                   drop: ["ALL"]
+          volumeMounts:
+          - name: tmp-storage
+            mountPath: /tmp          
           env:
           - name: OpenShiftRouteSupport
             value: "{{ .Values.parameters.openshiftRouteSupport }}"
+      volumes:
+      - name: tmp-storage
+        emptyDir: {}    
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
