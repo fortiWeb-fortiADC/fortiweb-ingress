@@ -5,7 +5,7 @@ metadata:
 rules:
 - apiGroups: [""]
   resources: ["pods", "services", "nodes", "endpoints", "secrets"]
-  verbs: ["get", "watch", "list"]
+  verbs: ["get", "watch", "list", "update"]
 - apiGroups:
   - networking.k8s.io
   resources:
@@ -33,6 +33,14 @@ rules:
   - ingresses/status
   verbs:
   - update
+- apiGroups:
+  - discovery.k8s.io
+  resources:
+  - endpointslices
+  verbs:
+  - get
+  - list
+  - watch
 {{- if eq .Values.parameters.openshiftRouteSupport "yes" }}
 - apiGroups:
   - route.openshift.io
